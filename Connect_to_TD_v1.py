@@ -42,7 +42,7 @@ class td_connect():
         dbname =  query.split("from")[1]
         dbname = dbname.split(".")[0]
         conn = db1.connect(jclassname=self.jclassname,
-                           url='jdbc:teradata://{0}.wal-mart.com/database={1},tmode=ANSI,charset=UTF8,LOGMECH=LDAP'.format(database,dbname),
+                           url='jdbc:teradata://{0}.{server_name}.com/database={1},tmode=ANSI,charset=UTF8,LOGMECH=LDAP'.format(database,dbname),
                             driver_args={'user':username,'password':passwd},
                                       jars = [self.jarfile1,
                                               self.jarfile2])
